@@ -107,3 +107,13 @@ html {
     padding-inline: 40px;
   }
 }
+
+/* &:nth-child(1) {
+  transform: translate(0, 6px) rotate(-45deg);
+}
+&:nth-child(2) {
+  opacity: 0;
+}
+&:nth-child(3) {
+  transform: translate(0, -6px) rotate(45deg);
+} */
