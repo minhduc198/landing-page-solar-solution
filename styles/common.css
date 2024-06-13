@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-red: #ee0000;
+  --color-black: #000000;
+  --color-grey: #eaeaea;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 150px;
+}
+
+.text-sm {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.text-base {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.text-xl {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text-2xl {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+}
+
+.text-3xl {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.text-4xl {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 85px;
+}
+
+.text-5xl {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.text-6xl {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 76px;
+}
+
+@media screen and (max-width: 1201px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 120px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-inline: 100px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding-inline: 80px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .container {
+    max-width: 576px;
+    margin: 0 auto;
+    padding-inline: 60px;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .container {
+    max-width: 390px;
+    margin: 0 auto;
+    padding-inline: 40px;
+  }
+}

@@ -1,0 +1,161 @@
+.our-expertise-experience {
+  margin-top: 117.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reels {
+  margin-top: 25.25px;
+  display: flex;
+  gap: 30px;
+}
+
+.reel {
+  color: var(--color-white);
+  height: 432.62px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 24.74px 13.96px 0 22.39px;
+  overflow: hidden;
+}
+
+.title-reel {
+  text-transform: capitalize;
+}
+
+.desc-reel {
+  margin-top: 18.09px;
+}
+
+.reel-1,
+.reel-2,
+.reel-3,
+.reel-4 {
+  background-size: 110%;
+  transition: all 0.6s ease;
+  background-repeat: no-repeat;
+}
+
+.reel-1 {
+  background-image: url(../assets/images/reel-1.png);
+}
+
+.reel-2 {
+  background-image: url(../assets/images/reel-2.png);
+}
+
+.reel-3 {
+  background-image: url(../assets/images/reel-3.png);
+}
+
+.reel-4 {
+  background-image: url(../assets/images/reel-4.png);
+}
+
+.reel-1:hover,
+.reel-2:hover,
+.reel-3:hover,
+.reel-4:hover {
+  background-size: 130%;
+}
+
+.reel .desc-reel {
+  transform: translateY(-100px);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.reel:hover .desc-reel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1201px) {
+  .our-expertise-experience p {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .reel {
+    height: 332.62px;
+  }
+
+  .title-reel {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .desc-reel {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .our-expertise-experience p {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .reels {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+  }
+
+  .reel {
+    height: 432.62px;
+    padding-right: 80px;
+  }
+
+  .title-reel {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .desc-reel {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-expertise-experience p {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .reels {
+    grid-template-columns: 50% 50%;
+  }
+
+  .reel {
+    padding-right: 23px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .reels {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 75%;
+    grid-gap: 20px;
+  }
+
+  .title-reel {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .desc-reel {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .reels {
+    grid-template-columns: 90%;
+    grid-gap: 20px;
+  }
+}
