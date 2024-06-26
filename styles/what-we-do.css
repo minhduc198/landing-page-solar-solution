@@ -1,0 +1,46 @@
+.what-we-do {
+  padding-block: 95px;
+}
+
+.title-what-we-are span {
+  color: var(--color-red);
+  font-size: 20px;
+}
+
+.title-what-we-are {
+  text-align: center;
+}
+
+.wrapper-card-wwd {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.card-wwd {
+  padding: 31px 17px;
+  background-color: var(--color-grey);
+  border-radius: 10px;
+}
+
+.title-card-wwd {
+  color: #464646;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 21px;
+}
+
+.desc-card-wwd {
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+}

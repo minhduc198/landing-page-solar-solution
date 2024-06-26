@@ -41,6 +41,81 @@
   display: none;
 }
 
+.open-submenu-icon,
+.close-submenu-icon {
+  display: none;
+}
+
+/*  */
+@media screen and (max-width: 1990px) {
+  .home-submenu,
+  .about-us-submenu {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--color-white);
+    height: 70vh;
+    padding: 30px 80px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    box-shadow: 2px 2px 20px rgba(140, 140, 140, 0.555);
+  }
+
+  .home-submenu.home-submenu-active,
+  .about-us-submenu.about-us-submenu-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .submenu-wrapper {
+    display: flex;
+  }
+
+  .btn-back {
+    display: none;
+  }
+
+  .submenu-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+  }
+
+  .content .item-content {
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-bottom: 20px;
+  }
+
+  .submenu-img {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 18px;
+  }
+
+  .card-img img {
+    width: 280px;
+    height: 350px;
+  }
+
+  .card-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-transform: uppercase;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 31px 69px 30.27px 76px;
@@ -97,6 +172,7 @@
 
   .menu-list li {
     font-size: 10px;
+    line-height: 14px;
   }
 
   .logo-header img {
@@ -105,17 +181,13 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
   .header {
+    position: sticky;
+    top: 0;
     padding: 25px 49px 26px 56px;
     flex-direction: row-reverse;
   }
-
-  /* .menu-wrapper {
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-  } */
 
   .menu-list {
     position: absolute;
@@ -177,7 +249,7 @@
   }
 
   .hozirontal {
-    background-color: red;
+    background-color: var(--color-white);
     width: 24px;
     height: 3px;
     border-radius: 4px;
@@ -196,5 +268,222 @@
     &:nth-child(3) {
       transform: translate(0, -8px) rotate(45deg);
     }
+  }
+} */
+
+@media screen and (max-width: 576px) {
+  .header {
+    flex-direction: row-reverse;
+    transition: all 0.4s ease;
+    height: 91px;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .header.header-active {
+    height: 150vh;
+    background-color: var(--color-black);
+    box-shadow: 2px 2px 20px rgb(74, 74, 74);
+  }
+
+  .logo-header {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 50px;
+  }
+
+  .logo-header p {
+    color: var(--color-red);
+  }
+
+  .hamburger-menu {
+    position: absolute;
+    z-index: 5;
+    top: 35px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hozirontal {
+    background-color: var(--color-red);
+    width: 24px;
+    height: 3px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 100px;
+    visibility: hidden;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .menu-list.menu-list-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-list li {
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 20px 30px;
+    transition: 0.3s ease;
+  }
+
+  .menu-list li:hover {
+    transform: translateX(20px);
+  }
+
+  .hamburger-menu.hamburger-active .hozirontal {
+    background-color: var(--color-red);
+
+    &:nth-child(1) {
+      transform: translate(0, 8px) rotate(-45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translate(0, -8px) rotate(45deg);
+    }
+  }
+
+  .home-submenu,
+  .about-us-submenu {
+    height: 150vh;
+    padding: 80px 20px 0 50px;
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    opacity: 0;
+  }
+
+  .home-submenu.home-submenu-active,
+  .about-us-submenu.about-us-submenu-active {
+    opacity: 1;
+  }
+
+  .submenu-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* .content ul {
+    display: none;
+  } */
+
+  .btn-back {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-black);
+    cursor: pointer;
+  }
+
+  .submenu-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content ul {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 5px 20px;
+    border-left: 1px solid var(--color-black);
+    transition: all 0.3s ease;
+  }
+
+  .content ul.ul-active {
+    height: fit-content;
+    visibility: visible;
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+  .open-submenu-icon,
+  .close-submenu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .close-submenu-icon {
+    display: none;
+  }
+
+  .open-submenu-icon {
+    display: block;
+  }
+
+  .content li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .submenu-img {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 12px;
+  }
+
+  .card-img img {
+    width: 180px;
+    height: 250px;
+  }
+
+  .card-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+  }
+
+  .card-title,
+  .card-desc {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .submenu-img {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 60%;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+  }
+  .submenu-img::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .submenu-img > * {
+    scroll-snap-align: start;
   }
 }

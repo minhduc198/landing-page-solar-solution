@@ -1,0 +1,186 @@
+.who-we-are {
+  background-color: var(--color-red);
+  padding-top: 44px;
+  padding-bottom: 70px;
+}
+
+.content-who-we-are {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 67px;
+}
+
+.text-content-who-we-are h2,
+.desc-who-we-are {
+  color: var(--color-white);
+}
+
+.desc-who-we-are {
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.desc-who-we-are.desc-who-we-are-hidden {
+  -webkit-line-clamp: unset;
+}
+
+.img-content-who-we-are {
+  position: relative;
+  inset: 0;
+}
+
+.img-content-who-we-are img:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  left: 225px;
+  top: 20%;
+}
+
+.btn-who-we-are {
+  display: flex;
+  gap: 31px;
+  margin-top: 30px;
+}
+
+.btn-read-more {
+  background-color: var(--color-white);
+}
+
+.btn-contact-us {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-contact-us,
+.btn-read-more {
+  border-radius: 40px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .content-who-we-are {
+    gap: 57px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    left: 180px;
+  }
+
+  .btn-who-we-are {
+    gap: 20px;
+  }
+
+  .img-content-who-we-are img:nth-child(1) {
+    width: 300px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    width: 300px;
+  }
+
+  .btn-contact-us,
+  .btn-read-more {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .content-who-we-are {
+    gap: 37px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    left: 180px;
+  }
+
+  .btn-who-we-are {
+    gap: 16px;
+  }
+
+  .img-content-who-we-are img:nth-child(1) {
+    width: 250px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    width: 250px;
+  }
+
+  .btn-contact-us,
+  .btn-read-more {
+    padding: 10px 10px;
+  }
+
+  .text-content-who-we-are h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .desc-who-we-are {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .btn-read-more,
+  .btn-contact-us {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-who-we-are {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-content-who-we-are {
+    left: -15%;
+  }
+
+  .img-content-who-we-are img:nth-child(1) {
+    width: 300px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .img-content-who-we-are {
+    left: -20%;
+  }
+
+  .img-content-who-we-are img:nth-child(1) {
+    width: 250px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    width: 250px;
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .img-content-who-we-are {
+    left: -20%;
+  }
+
+  .img-content-who-we-are img:nth-child(1) {
+    width: 200px;
+  }
+
+  .img-content-who-we-are img:nth-child(2) {
+    width: 200px;
+    left: 130px;
+  }
+
+  .btn-read-more,
+  .btn-contact-us {
+    font-size: 12px;
+  }
+}
